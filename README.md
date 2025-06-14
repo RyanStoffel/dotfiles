@@ -25,6 +25,7 @@ ln -s ../dotfiles/.ssh/known_hosts.old ~/.ssh/known_hosts.old
 ```
 
 ## Structure
+```bash
 ~/dotfiles/
 ├── .config/            # Application configurations
 │   ├── nvim/           # Neovim config (separate repo)
@@ -38,6 +39,7 @@ ln -s ../dotfiles/.ssh/known_hosts.old ~/.ssh/known_hosts.old
 │   └── known_hosts.old
 ├── nix-darwin-config/  # Nix Darwin config (separate repo)
 └── .gitignore
+```
 
 ## What's Managed
 
@@ -112,6 +114,7 @@ ln -s ../dotfiles/.ssh/known_hosts.old ~/.ssh/known_hosts.old
 
 ## Related Repositories
 [nvim](https://github.com/RyanStoffel/nvim) - Neovim configuration
+
 [nix-darwin-config](https://github.com/RyanStoffel/nix-darwin-config) - Nix Darwin system configuration
 
 ## Notes
