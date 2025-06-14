@@ -33,7 +33,6 @@
 				zsh-powerlevel10k
 				kitty
 				vscode
-				stow
 
 				# Browsers
 				google-chrome
