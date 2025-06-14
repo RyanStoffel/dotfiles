@@ -5,8 +5,52 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
+			# General Aliases
       ll = "ls -la";
-      g = "git";
+
+			# Basic git shortcuts
+    	gs = "git status";
+    	ga = "git add";
+    	gaa = "git add --all";
+    	gc = "git commit -m";
+    	gco = "git checkout";
+    	gb = "git branch";
+    	gd = "git diff";
+    	gl = "git log --oneline --graph --decorate";
+
+    	# Push/Pull shortcuts
+    	gp = "git push";
+    	gpl = "git pull";
+    	gpum = "git push -u origin main";      # Push and set upstream to main
+    	gpom = "git push origin main";         # Push to main
+    	gplom = "git pull origin main";        # Pull from main
+
+    	# Branch management
+    	gcb = "git checkout -b";               # Create and checkout new branch
+    	gcom = "git checkout main";            # Switch to main
+    	gbr = "git branch -r";                 # List remote branches
+    	gbd = "git branch -d";                 # Delete branch
+
+    	# Stash shortcuts
+    	gst = "git stash";
+    	gstp = "git stash pop";
+    	gstl = "git stash list";
+
+    	# Reset shortcuts
+    	grh = "git reset --hard";
+    	grs = "git reset --soft";
+    	gru = "git reset HEAD~1";              # Undo last commit
+
+    	# Remote shortcuts
+    	gf = "git fetch";
+    	gfa = "git fetch --all";
+    	gr = "git remote -v";
+
+    	# Quick commit and push
+    	gacp = "git add --all && git commit -m";  # Add all and commit (needs message)
+
+			# Nix Aliases
+			rebuild = "sudo darwin-rebuild switch --flake ~/nix-darwin-config";
     };
     initContent = ''
       # Enable Powerlevel10k instant prompt
