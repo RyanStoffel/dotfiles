@@ -26,17 +26,29 @@ ln -s ../dotfiles/.ssh/known_hosts.old ~/.ssh/known_hosts.old
 
 ## Structure
 ~/dotfiles/
+
 ├── .config/            # Application configurations
+
 │   ├── nvim/           # Neovim config (separate repo)
+
 │   ├── kitty/          # Kitty terminal
+
 │   ├── fontconfig/     # Font configuration
+
 │   ├── nix/            # Nix configuration
+
 │   ├── raycast/        # Raycast settings
+
 │   └── gh/             # GitHub CLI
+
 ├── .ssh/               # SSH known hosts only
+
 │   ├── known_hosts
+
 │   └── known_hosts.old
+
 ├── nix-darwin-config/  # Nix Darwin config (separate repo)
+
 └── .gitignore
 
 ## What's Managed
