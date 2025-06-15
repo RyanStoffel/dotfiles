@@ -34,6 +34,7 @@
 				kitty
 				vscode
 				zoxide
+				fzf
 
 				# Browsers
 				google-chrome
