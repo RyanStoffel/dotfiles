@@ -2,13 +2,17 @@
 {
   home.username = "rstoffel";
   home.homeDirectory = "/Users/rstoffel";
+	programs.zoxide = {
+  	enable = true;
+  	enableZshIntegration = false;
+	};
+
   programs.zsh = {
     enable = true;
     shellAliases = {
 			# General Aliases
       ll = "ls -la";
 			c = "clear";
-			cd = "z";
 
 			# Basic git shortcuts
     	gs = "git status";
@@ -67,7 +71,10 @@
 
       # Load p10k configuration
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+			eval "$(zoxide init --cmd cd zsh)"
     '';
+
     plugins = [
       {
         name = "zsh-autosuggestions";
