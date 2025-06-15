@@ -8,6 +8,7 @@
 			# General Aliases
       ll = "ls -la";
 			c = "clear";
+			cd = "z";
 
 			# Basic git shortcuts
     	gs = "git status";
