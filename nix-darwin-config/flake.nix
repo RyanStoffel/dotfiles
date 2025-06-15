@@ -33,6 +33,7 @@
 				zsh-powerlevel10k
 				kitty
 				vscode
+				zoxide
 
 				# Browsers
 				google-chrome
