@@ -7,6 +7,7 @@
     shellAliases = {
 			# General Aliases
       ll = "ls -la";
+			c = "clear";
 
 			# Basic git shortcuts
     	gs = "git status";
