@@ -1,3 +1,6 @@
 [submodule "nix-darwin-config"]
 	path = nix-darwin-config
 	url = https://github.com/RyanStoffel/nix-darwin-config
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/RyanStoffel/nvim
