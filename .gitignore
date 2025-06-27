@@ -12,5 +12,3 @@ Thumbs.db
 *.swp
 *.swo
 *~
-.config/nvim/
-nix-darwin-config/
