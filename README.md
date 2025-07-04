@@ -6,8 +6,8 @@ My personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/)
 
 ```bash
 # Clone the repository
-git clone git@github.com:RyanStoffel/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone git@github.com:RyanStoffel/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 
 # Install GNU Stow
 brew install stow
@@ -26,7 +26,7 @@ ln -s ../dotfiles/.ssh/known_hosts.old ~/.ssh/known_hosts.old
 
 ## Structure
 ```bash
-~/dotfiles/
+~/.dotfiles/
 ├── fastfetch/
 ├── fontconfig/
 ├── gh/
@@ -96,14 +96,14 @@ ln -s ../dotfiles/.ssh/known_hosts.old ~/.ssh/known_hosts.old
 ### Adding New Configurations
 ```bash
 # Create package directory
-mkdir ~/dotfiles/new-app/.config/new-app
+mkdir ~/.dotfiles/new-app/.config/new-app
 
 # Move config files
-mv ~/.config/new-app ~/dotfiles/new-app/.config/new-app/
+mv ~/.config/new-app ~/.dotfiles/new-app/.config/new-app/
 
 # Stow it
-cd ~/dotfiles
-stow .config/new-app
+cd ~/.dotfiles
+stow new-app
 ```
 
 ## Updating Configurations
