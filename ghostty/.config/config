@@ -1,0 +1,11 @@
+font-size = 16
+theme = "catppuccin-mocha"
+title = " "
+desktop-notifications = false
+maximize = true
+shell-integration = zsh
+window-theme = dark
+macos-non-native-fullscreen = visible-menu
+macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden
+window-save-state = always
