@@ -6,18 +6,18 @@ My personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/)
 
 ```bash
 # Clone the repository
-git clone git@github.com:RyanStoffel/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone git@github.com:RyanStoffel/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 
 # Install GNU Stow
 brew install stow
 
 # Stow configurations
 stow nix-darwin-config  # Nix Darwin configuration
-stow .config            # App configurations
+stow app-name           # App configurations
 
 # Setup Nix Darwin
-darwin-rebuild switch --flake ~/nix-darwin-config
+rebuild
 
 # For SSH, manually create symlinks (keys stay local)
 ln -s ../dotfiles/.ssh/known_hosts ~/.ssh/known_hosts
@@ -26,26 +26,51 @@ ln -s ../dotfiles/.ssh/known_hosts.old ~/.ssh/known_hosts.old
 
 ## Structure
 ```bash
-~/dotfiles/
-├── .config/            # Application configurations
-│   ├── nvim/           # Neovim config (separate repo)
-│   ├── kitty/          # Kitty terminal
-│   ├── fontconfig/     # Font configuration
-│   ├── nix/            # Nix configuration
-│   ├── raycast/        # Raycast settings
-│   └── gh/             # GitHub CLI
+~/.dotfiles/
+├── fastfetch/
+├── fontconfig/
+├── gh/
+├── ghostty/
+├── nix/
+├── nix-darwin-config/  # Nix Darwin config (submodule)
+│   ├── flake.lock
+│   ├── flake.nix
+│   ├── home.nix
+│   └── README.md
+├── nvim/               # Nvim Config (submodule)
+│   ├── init.lua
+│   ├── lazy-lock.json
+│   └── lua/
+│       └── plugins/
+│       │   ├── alpha.lua
+│       │   ├── autopairs.lua
+│       │   ├── catppuccin.lua
+│       │   ├── cmp.lua
+│       │   ├── conform.lua
+│       │   ├── lsp.lua
+│       │   ├── lspkind.lua
+│       │   ├── lualine.lua
+│       │   ├── noice.lua
+│       │   ├── nvim-tree.lua
+│       │   ├── snacks.lua
+│       │   ├── telescope.lua
+│       │   ├── treesitter.lua
+│       │   └── which-key.lua
+│       └── rstoffel/
+│           └── init.lua
+├── raycast/
 ├── .ssh/               # SSH known hosts only
 │   ├── known_hosts
 │   └── known_hosts.old
-├── nix-darwin-config/  # Nix Darwin config (separate repo)
 └── .gitignore
+└── README.md
 ```
 
 ## What's Managed
 
 ### Applications
 - **Neovim**: Full Lua configuration with plugins
-- **Kitty**: Terminal emulator settings
+- **Ghostty**: Terminal emulator settings
 - **Raycast**: Productivity launcher
 - **GitHub CLI**: Authentication and preferences
 
@@ -71,41 +96,41 @@ ln -s ../dotfiles/.ssh/known_hosts.old ~/.ssh/known_hosts.old
 ### Adding New Configurations
 ```bash
 # Create package directory
-mkdir ~/dotfiles/.config/new-app
+mkdir ~/.dotfiles/new-app/.config/new-app
 
 # Move config files
-mv ~/.config/new-app ~/dotfiles/.config/new-app
+mv ~/.config/new-app ~/.dotfiles/new-app/.config/new-app/
 
 # Stow it
-cd ~/dotfiles
-stow .config/new-app
+cd ~/.dotfiles
+stow new-app
 ```
 
 ## Updating Configurations
 ```bash
 # Edit files directly in dotfiles directory
-nvim ~/dotfiles/.config/nvim/init.lua
+nvim ~/dotfiles/nvim/.config/nvim/init.lua
 
 # Changes are automatically reflected (symlinks!)
 # Commit when ready
-git add .
-git commit -m "Update nvim config"
-git push
+gaa
+gc "Update nvim config"
+gp
 ```
 
 ## Managing on Multiple Machines
 ```bash
 # On new machine
-git clone git@github.com:RyanStoffel/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone git@github.com:RyanStoffel/.dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 
 # Install stow and setup everything
 brew install stow
 stow nix-darwin-config
-stow .config
+stow app-name
 
 # Setup Nix Darwin
-sudo darwin-rebuild switch --flake ~/nix-darwin-config
+rebuild
 
 # For SSH, manually create symlinks (keys stay local)
 ln -s ../dotfiles/.ssh/known_hosts ~/.ssh/known_hosts
