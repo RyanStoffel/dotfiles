@@ -4,3 +4,6 @@
 [submodule ".config/nvim"]
 	path = nvim
 	url = https://github.com/RyanStoffel/nvim
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/RyanStoffel/nvim.git
