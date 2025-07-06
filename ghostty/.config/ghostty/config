@@ -9,3 +9,4 @@ macos-non-native-fullscreen = visible-menu
 macos-titlebar-style = transparent
 macos-titlebar-proxy-icon = hidden
 window-save-state = always
+
