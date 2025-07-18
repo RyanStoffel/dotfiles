@@ -48,7 +48,9 @@ if command -v gh >/dev/null 2>&1; then
 fi
 
 
-# Salesforce CLI completion (suppress warnings)
+# Salesforce CLI - skip autocomplete to avoid warnings
 if command -v sf >/dev/null 2>&1; then
-    SF_AUTOUPDATE_DISABLE=true eval "$(sf autocomplete:script zsh 2>/dev/null)" || true
+    # SF CLI is available, but skip autocomplete due to homebrew plugin warnings
+    export SF_AUTOUPDATE_DISABLE=true
+    export SF_LOG_LEVEL=error
 fi
