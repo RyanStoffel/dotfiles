@@ -261,32 +261,168 @@ function sf-retrieve() {
     fi
 }
 
+# Convert metadata format
+function sf-convert() {
+    local source_dir=""
+    local metadata=""
+    local manifest=""
+    local output_dir=""
+    
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -d|--source-dir)
+                source_dir="--source-dir $2"
+                shift 2
+                ;;
+            -m|--metadata)
+                metadata="--metadata $2"
+                shift 2
+                ;;
+            -x|--manifest)
+                manifest="--manifest $2"
+                shift 2
+                ;;
+            -o|--output-dir)
+                output_dir="--output-dir $2"
+                shift 2
+                ;;
+            *)
+                echo "Unknown option: $1"
+                echo "Usage: sf-convert [-d source-dir] [-m metadata] [-x manifest] [-o output-dir]"
+                return 1
+                ;;
+        esac
+    done
+    
+    echo "Converting metadata format..."
+    local cmd="sf project convert source $source_dir $metadata $manifest $output_dir"
+    echo "Running: $cmd"
+    
+    if eval $cmd >/dev/null 2>&1; then
+        echo "✓ Convert completed successfully"
+    else
+        echo "✗ Convert failed"
+        return 1
+    fi
+}
+
 # Navigation shortcuts
 function sfnav() {
     case "$1" in
-        "classes"|"apex")
-            cd force-app/main/default/classes && echo "→ Apex classes"
-            ;;
-        "triggers")
-            cd force-app/main/default/triggers && echo "→ Apex triggers"
-            ;;
-        "lwc")
-            cd force-app/main/default/lwc && echo "→ Lightning Web Components"
+        "applications")
+            cd force-app/main/default/applications && echo "→ Applications"
             ;;
         "aura")
             cd force-app/main/default/aura && echo "→ Aura components"
             ;;
-        "objects")
-            cd force-app/main/default/objects && echo "→ Custom objects"
+        "bots")
+            cd force-app/main/default/bots && echo "→ Bots"
+            ;;
+        "classes"|"apex")
+            cd force-app/main/default/classes && echo "→ Apex classes"
+            ;;
+        "contentassets")
+            cd force-app/main/default/contentassets && echo "→ Content assets"
+            ;;
+        "csptrustedsites")
+            cd force-app/main/default/cspTrustedSites && echo "→ CSP trusted sites"
+            ;;
+        "externalcredentials")
+            cd force-app/main/default/externalCredentials && echo "→ External credentials"
+            ;;
+        "flexipages")
+            cd force-app/main/default/flexipages && echo "→ Flexi pages"
             ;;
         "flows")
             cd force-app/main/default/flows && echo "→ Flows"
             ;;
+        "genaifunctions")
+            cd force-app/main/default/genAiFunctions && echo "→ Gen AI functions"
+            ;;
+        "genaiplannerbundles")
+            cd force-app/main/default/genAiPlannerBundles && echo "→ Gen AI planner bundles"
+            ;;
+        "genaiplannertemplates")
+            cd force-app/main/default/genAiPromptTemplates && echo "→ Gen AI prompt templates"
+            ;;
+        "genaiplugins")
+            cd force-app/main/default/genAiPlugins && echo "→ Gen AI plugins"
+            ;;
+        "layouts")
+            cd force-app/main/default/layouts && echo "→ Layouts"
+            ;;
+        "lwc")
+            cd force-app/main/default/lwc && echo "→ Lightning Web Components"
+            ;;
+        "namedcredentials")
+            cd force-app/main/default/namedCredentials && echo "→ Named credentials"
+            ;;
+        "notificationtypes")
+            cd force-app/main/default/notificationtypes && echo "→ Notification types"
+            ;;
+        "objects")
+            cd force-app/main/default/objects && echo "→ Custom objects"
+            ;;
+        "pages")
+            cd force-app/main/default/pages && echo "→ Visualforce pages"
+            ;;
+        "permissionsets")
+            cd force-app/main/default/permissionsets && echo "→ Permission sets"
+            ;;
+        "profiles")
+            cd force-app/main/default/profiles && echo "→ Profiles"
+            ;;
+        "quickactions")
+            cd force-app/main/default/quickActions && echo "→ Quick actions"
+            ;;
+        "staticresources")
+            cd force-app/main/default/staticresources && echo "→ Static resources"
+            ;;
+        "tabs")
+            cd force-app/main/default/tabs && echo "→ Tabs"
+            ;;
+        "triggers")
+            cd force-app/main/default/triggers && echo "→ Apex triggers"
+            ;;
         "config")
             cd config && echo "→ Config directory"
             ;;
+        "manifest")
+            cd manifest && echo "→ Manifest directory"
+            ;;
+        "list")
+            echo "Available navigation options:"
+            echo "  applications        - Applications"
+            echo "  aura               - Aura components"
+            echo "  bots               - Bots"
+            echo "  classes|apex       - Apex classes"
+            echo "  contentassets      - Content assets"
+            echo "  csptrustedsites    - CSP trusted sites"
+            echo "  externalcredentials - External credentials"
+            echo "  flexipages         - Flexi pages"
+            echo "  flows              - Flows"
+            echo "  genaifunctions     - Gen AI functions"
+            echo "  genaiplannerbundles - Gen AI planner bundles"
+            echo "  genaiplannertemplates - Gen AI prompt templates"
+            echo "  genaiplugins       - Gen AI plugins"
+            echo "  layouts            - Layouts"
+            echo "  lwc                - Lightning Web Components"
+            echo "  namedcredentials   - Named credentials"
+            echo "  notificationtypes  - Notification types"
+            echo "  objects            - Custom objects"
+            echo "  pages              - Visualforce pages"
+            echo "  permissionsets     - Permission sets"
+            echo "  profiles           - Profiles"
+            echo "  quickactions       - Quick actions"
+            echo "  staticresources    - Static resources"
+            echo "  tabs               - Tabs"
+            echo "  triggers           - Apex triggers"
+            echo "  config             - Config directory"
+            echo "  manifest           - Manifest directory"
+            ;;
         *)
-            echo "Usage: sfnav {classes|triggers|lwc|aura|objects|flows|config}"
+            echo "Usage: sfnav {option|list}"
+            echo "Run 'sfnav list' to see all available options"
             ;;
     esac
 }
