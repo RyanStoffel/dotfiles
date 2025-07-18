@@ -11,9 +11,6 @@ alias sf-logout='sf org logout'
 alias sf-status='sf org list'
 alias sf-info='sf org display'
 alias sf-open='sf org open'
-alias apex-log='sf apex get log'
-alias sf-export='sf data export tree'
-alias sf-import='sf data import tree'
 alias sf-query='sf data query'
 
 # =============================================================================
@@ -78,7 +75,7 @@ function create-trigger() {
 }
 
 # Deploy using sf project deploy start
-function sf-deploy() {
+function deploy() {
     local target_org=""
     local manifest=""
     local source_dir=""
@@ -118,7 +115,7 @@ function sf-deploy() {
                 ;;
             *)
                 echo "Unknown option: $1"
-                echo "Usage: sf-deploy [-o target-org] [-x manifest] [-d source-dir] [-m metadata] [--dry-run] [--test-level level] [--run-tests]"
+                echo "Usage: deploy [-o target-org] [-x manifest] [-d source-dir] [-m metadata] [--dry-run] [--test-level level] [--run-tests]"
                 return 1
                 ;;
         esac
@@ -150,7 +147,7 @@ function sf-deploy() {
 }
 
 # Deploy using sf deploy metadata
-function sf-deploy-meta() {
+function deploy-metadata() {
     local target_org=""
     local manifest=""
     local source_dir=""
@@ -222,7 +219,7 @@ function sf-deploy-meta() {
 }
 
 # Retrieve metadata
-function sf-retrieve() {
+function retrieve() {
     local target_org=""
     local manifest=""
     local metadata=""
@@ -262,7 +259,7 @@ function sf-retrieve() {
 }
 
 # Convert metadata format
-function sf-convert() {
+function convert() {
     local source_dir=""
     local metadata=""
     local manifest=""
@@ -392,36 +389,36 @@ function sfnav() {
             ;;
         "list")
             echo "Available navigation options:"
-            echo "  applications        - Applications"
-            echo "  aura               - Aura components"
-            echo "  bots               - Bots"
-            echo "  classes|apex       - Apex classes"
-            echo "  contentassets      - Content assets"
-            echo "  csptrustedsites    - CSP trusted sites"
-            echo "  externalcredentials - External credentials"
-            echo "  flexipages         - Flexi pages"
-            echo "  flows              - Flows"
-            echo "  genaifunctions     - Gen AI functions"
-            echo "  genaiplannerbundles - Gen AI planner bundles"
+            echo "  applications          - Applications"
+            echo "  aura                  - Aura components"
+            echo "  bots                  - Bots"
+            echo "  classes|apex          - Apex classes"
+            echo "  contentassets         - Content assets"
+            echo "  csptrustedsites       - CSP trusted sites"
+            echo "  externalcredentials   - External credentials"
+            echo "  flexipages            - Flexi pages"
+            echo "  flows                 - Flows"
+            echo "  genaifunctions        - Gen AI functions"
+            echo "  genaiplannerbundles   - Gen AI planner bundles"
             echo "  genaiplannertemplates - Gen AI prompt templates"
-            echo "  genaiplugins       - Gen AI plugins"
-            echo "  layouts            - Layouts"
-            echo "  lwc                - Lightning Web Components"
-            echo "  namedcredentials   - Named credentials"
-            echo "  notificationtypes  - Notification types"
-            echo "  objects            - Custom objects"
-            echo "  pages              - Visualforce pages"
-            echo "  permissionsets     - Permission sets"
-            echo "  profiles           - Profiles"
-            echo "  quickactions       - Quick actions"
-            echo "  staticresources    - Static resources"
-            echo "  tabs               - Tabs"
-            echo "  triggers           - Apex triggers"
-            echo "  config             - Config directory"
-            echo "  manifest           - Manifest directory"
+            echo "  genaiplugins          - Gen AI plugins"
+            echo "  layouts               - Page Layouts"
+            echo "  lwc                   - Lightning Web Components"
+            echo "  namedcredentials      - Named credentials"
+            echo "  notificationtypes     - Notification types"
+            echo "  objects               - Custom objects"
+            echo "  pages                 - Visualforce pages"
+            echo "  permissionsets        - Permission sets"
+            echo "  profiles              - Profiles"
+            echo "  quickactions          - Quick actions"
+            echo "  staticresources       - Static resources"
+            echo "  tabs                  - Custom Tabs"
+            echo "  triggers              - Apex triggers"
+            echo "  config                - Config directory"
+            echo "  manifest              - Manifest directory"
             ;;
         *)
-            echo "Usage: sfnav {option|list}"
+            echo "Usage: sfnav {option}"
             echo "Run 'sfnav list' to see all available options"
             ;;
     esac
