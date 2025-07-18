@@ -70,10 +70,10 @@ function create-class() {
     
     echo "Creating Apex class: $1..."
     
-    # Run command silently
-    SF_AUTOUPDATE_DISABLE=true NODE_NO_WARNINGS=1 sf apex generate class --name "$1" >/dev/null 2>&1
+    # Run command silently with proper output directory
+    SF_AUTOUPDATE_DISABLE=true NODE_NO_WARNINGS=1 sf apex generate class --name "$1" --output-dir force-app/main/default/classes >/dev/null 2>&1
     
-    # Check if the class was created successfully
+    # Check if the class was created successfully in the correct location
     if [[ -f "force-app/main/default/classes/$1.cls" ]]; then
         echo "  Created class file: force-app/main/default/classes/$1.cls"
         echo "  Created meta file: force-app/main/default/classes/$1.cls-meta.xml"
@@ -83,7 +83,6 @@ function create-class() {
         return 1
     fi
 }
-
 # Apex trigger creation
 function create-trigger() {
     if [ $# -eq 0 ]; then
@@ -93,10 +92,10 @@ function create-trigger() {
     
     echo "Creating Apex trigger: $1..."
     
-    # Run command silently
-    SF_AUTOUPDATE_DISABLE=true NODE_NO_WARNINGS=1 sf apex generate trigger --name "$1" >/dev/null 2>&1
+    # Run command silently with proper output directory
+    SF_AUTOUPDATE_DISABLE=true NODE_NO_WARNINGS=1 sf apex generate trigger --name "$1" --output-dir force-app/main/default/triggers >/dev/null 2>&1
     
-    # Check if the trigger was created successfully
+    # Check if the trigger was created successfully in the correct location
     if [[ -f "force-app/main/default/triggers/$1.trigger" ]]; then
         echo "  Created trigger file: force-app/main/default/triggers/$1.trigger"
         echo "  Created meta file: force-app/main/default/triggers/$1.trigger-meta.xml"
