@@ -11,19 +11,20 @@ alias sf-info='sf org display'
 alias sf-open='sf org open'
 
 # SFDX project shortcuts
-alias sfdx-create='sf project generate'
-alias sfdx-deploy='sf project deploy start'
-alias sfdx-retrieve='sf project retrieve start'
-alias sfdx-test='sf apex run test'
+alias project-create='sf project generate'
+alias deploy='sf project deploy start'
+alias retrieve='sf project retrieve start'
+alias project-test='sf apex run test'
+alias convert='sf project convert source'
+alias deploy-metadata='sf deploy metadata'
 
 # Apex development
 alias apex-log='sf apex get log'
-alias apex-class='sf apex generate class'
-alias apex-trigger='sf apex generate trigger'
+alias create-class='sf apex generate class'
+alias create-trigger='sf apex generate trigger'
 
 # Lightning development
-alias lwc-create='sf lightning generate component'
-alias aura-create='sf lightning generate app'
+alias create-lwc='sf lightning generate component'
 
 # Data management
 alias sf-export='sf data export tree'
