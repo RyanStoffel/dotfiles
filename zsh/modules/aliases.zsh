@@ -1,3 +1,4 @@
+# General aliases
 alias ll='ls -la'
 alias c='clear'
 alias cat='bat'
@@ -33,4 +34,3 @@ alias gac='git add --all && git commit -m'
 
 # Development aliases
 alias rebuild='sudo darwin-rebuild switch --flake ~/nix-darwin-config && nix-collect-garbage -d'
-alias dina='cd /Users/rstoffel/Documents/Dev/dina-salesforce/'
