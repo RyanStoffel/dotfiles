@@ -1,7 +1,3 @@
-# =============================================================================
-# Zsh Completion System Configuration
-# =============================================================================
-
 # Initialize completion system
 autoload -U compinit && compinit
 
@@ -34,23 +30,6 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 # Git completion optimization
 zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:git-*:*' group-order 'main commands' 'alias commands' 'external commands'
-
-# Salesforce CLI completion (if installed)
-if command -v sf >/dev/null 2>&1; then
-    # Add Salesforce CLI completions
-    eval "$(sf autocomplete:script zsh)"
-fi
-
-# Development tools completion
-if command -v npm >/dev/null 2>&1; then
-    eval "$(npm completion 2>/dev/null || true)"
-fi
-
-# Docker completion
-if command -v docker >/dev/null 2>&1; then
-    zstyle ':completion:*:docker:*' option-stacking yes
-    zstyle ':completion:*:docker-*:*' option-stacking yes
-fi
 
 # Create cache directory
 mkdir -p ~/.zsh/cache

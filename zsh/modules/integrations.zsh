@@ -1,7 +1,3 @@
-# =============================================================================
-# Tool Initialization and Integration
-# =============================================================================
-
 # Starship prompt initialization
 if command -v starship >/dev/null 2>&1; then
     eval "$(starship init zsh)"
@@ -17,7 +13,7 @@ if command -v fastfetch >/dev/null 2>&1; then
     fastfetch
 fi
 
-# FZF integration (if installed)
+# FZF integration
 if command -v fzf >/dev/null 2>&1; then
     # Key bindings for fzf
     source <(fzf --zsh) 2>/dev/null || true
@@ -28,10 +24,6 @@ if command -v fzf >/dev/null 2>&1; then
     export FZF_ALT_C_OPTS='--preview "tree -C {} | head -200"'
 fi
 
-# Direnv integration (if installed)
-if command -v direnv >/dev/null 2>&1; then
-    eval "$(direnv hook zsh)"
-fi
 
 # Node Version Manager (NVM) integration
 if [ -d "$HOME/.nvm" ]; then
@@ -55,7 +47,3 @@ if command -v gh >/dev/null 2>&1; then
     eval "$(gh completion -s zsh)"
 fi
 
-# Kubernetes kubectl completion
-if command -v kubectl >/dev/null 2>&1; then
-    source <(kubectl completion zsh)
-fi

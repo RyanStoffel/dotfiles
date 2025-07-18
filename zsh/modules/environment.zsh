@@ -1,7 +1,3 @@
-# =============================================================================
-# Environment Variables and PATH Configuration
-# =============================================================================
-
 # Add Doom Emacs to PATH
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
@@ -10,18 +6,17 @@ export EDITOR="nvim"
 export BROWSER="open"
 
 # Node.js and Development Tools
-# export NODE_ENV="development"
+export NODE_ENV="development"
 
 # Java Development (useful for Salesforce development)
-# export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
+export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
 
 # Salesforce CLI Environment Variables
-# export SF_AUTOUPDATE_DISABLE=true
-# export SF_LOG_LEVEL=debug
+export SF_AUTOUPDATE_DISABLE=true
+export SF_LOG_LEVEL=debug
 
 # Development project directories (customize as needed)
-export DEV_HOME="$HOME/Development"
-export PROJECTS_HOME="$HOME/Projects"
+export DEV_HOME="$HOME/Dev"
 
 # Ensure /usr/local/bin is in PATH for development tools
 export PATH="/usr/local/bin:$PATH"

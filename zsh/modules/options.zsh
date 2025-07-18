@@ -1,7 +1,3 @@
-# =============================================================================
-# Zsh Options and Shell Behavior
-# =============================================================================
-
 # Changing directories
 setopt AUTO_CD              # Change to directory without typing cd
 setopt AUTO_PUSHD           # Push directories to stack automatically

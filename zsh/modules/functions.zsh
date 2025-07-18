@@ -1,7 +1,3 @@
-# =============================================================================
-# Zsh Functions - Custom helper functions
-# =============================================================================
-
 # Quick directory navigation
 function mkcd() {
     mkdir -p "$1" && cd "$1"
@@ -29,14 +25,6 @@ function dev() {
     fi
 }
 
-function proj() {
-    if [ -d "$PROJECTS_HOME/$1" ]; then
-        cd "$PROJECTS_HOME/$1"
-    else
-        echo "Project $1 not found in $PROJECTS_HOME"
-    fi
-}
-
 # Salesforce Development Functions
 function sf-org() {
     case "$1" in
@@ -53,14 +41,6 @@ function sf-org() {
             echo "Usage: sf-org {list|open|info} [org-alias]"
             ;;
     esac
-}
-
-function apex-test() {
-    if [ $# -eq 0 ]; then
-        sf apex run test --wait 10 --result-format human --output-dir ./test-results --coverage-formatters html
-    else
-        sf apex run test --class-names "$1" --wait 10 --result-format human
-    fi
 }
 
 # Quick file search
