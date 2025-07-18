@@ -47,3 +47,8 @@ if command -v gh >/dev/null 2>&1; then
     eval "$(gh completion -s zsh)"
 fi
 
+
+# Salesforce CLI completion (suppress warnings)
+if command -v sf >/dev/null 2>&1; then
+    SF_AUTOUPDATE_DISABLE=true eval "$(sf autocomplete:script zsh 2>/dev/null)" || true
+fi

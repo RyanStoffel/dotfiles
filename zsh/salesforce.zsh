@@ -20,11 +20,11 @@ alias deploy-metadata='sf deploy metadata'
 
 # Apex development
 alias apex-log='sf apex get log'
-alias create-class='sf apex generate class'
-alias create-trigger='sf apex generate trigger'
+alias create-class='sf apex generate class --name'
+alias create-trigger='sf apex generate trigger --name'
 
 # Lightning development
-alias create-lwc='sf lightning generate component'
+alias create-lwc='sf lightning generate component --type lwc --output-dir force-app/main/default/lwc --name'
 
 # Data management
 alias sf-export='sf data export tree'
