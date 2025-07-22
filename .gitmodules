@@ -1,6 +1,6 @@
-[submodule "nix-darwin-config"]
-	path = nix-darwin-config
-	url = https://github.com/RyanStoffel/nix-darwin-config
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/RyanStoffel/nvim.git
+[submodule "nixos-apollo"]
+	path = nixos-apollo
+	url = https://github.com/RyanStoffel/nix-darwin-config
