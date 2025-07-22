@@ -234,7 +234,7 @@ _comps=(
 'catchsegv' '_precommand'
 'cc' '_gcc'
 'ccal' '_ccal'
-'cd' '_cd'
+'cd' '__zoxide_z_complete'
 'cdbs-edit-patch' '_cdbs-edit-patch'
 'cdc' '_sccs'
 'cdcd' '_cdcd'
