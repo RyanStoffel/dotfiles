@@ -1,0 +1,22 @@
+{ pkgs, ... }: with pkgs; [
+  vim
+  wget
+  neovim
+  git
+  gh
+  jdk21
+  python313
+  python313Packages.pip
+  nodejs_22
+  curl
+  htop
+  eslint
+  zoxide
+  fzf
+  bat
+  starship
+  ripgrep
+  stow
+  gnome-session
+  xclip
+]
