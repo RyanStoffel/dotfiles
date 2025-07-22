@@ -1,9 +1,9 @@
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com/RyanStoffel/nvim.git
+	url = git@github.com:RyanStoffel/nvim.git
 [submodule "nixos-apollo"]
 	path = nixos-apollo
-	url = https://github.com/RyanStoffel/nix-darwin-config
+	url = git@github.com:RyanStoffel/nixos-apollo.git
 [submodule "nixos-artemis"]
 	path = nixos-artemis
-	url = https://github.com/RyanStoffel/nixos-artemis
+	url = git@github.com:RyanStoffel/nixos-artemis.git
