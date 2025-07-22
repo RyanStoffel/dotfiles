@@ -4,3 +4,6 @@
 [submodule "nixos-apollo"]
 	path = nixos-apollo
 	url = https://github.com/RyanStoffel/nix-darwin-config
+[submodule "nixos-artemis"]
+	path = nixos-artemis
+	url = git@github.com:RyanStoffel/nixos-artemis.git
