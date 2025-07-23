@@ -36,8 +36,8 @@ alias gac='git add --all && git commit -m'
 # Machine-specific rebuild aliases
 if [[ $(uname) == "Darwin" ]]; then
     # MacOS (Apollo) - Nix Darwin
-    alias rebuild='darwin-rebuild switch --flake ~/.dotfiles/nixos-apollo && nix-collect-garbage -d'
-    alias rebuild-test='darwin-rebuild build --flake ~/.dotfiles/nixos-apollo'
+    alias rebuild='sudo darwin-rebuild switch --flake ~/.dotfiles/nixos-apollo && nix-collect-garbage -d'
+    alias rebuild-test='sudo darwin-rebuild build --flake ~/.dotfiles/nixos-apollo'
 elif [[ -f /etc/nixos/configuration.nix ]]; then
     # NixOS (Artemis) - use absolute paths so they work from anywhere
     alias rebuild='sudo nixos-rebuild switch --flake /home/rstoffel/.dotfiles/nixos-artemis && nix-collect-garbage -d'
