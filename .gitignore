@@ -12,3 +12,8 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Zsh files
+.zcompdomp
+.zsh_history
+.zshrc
