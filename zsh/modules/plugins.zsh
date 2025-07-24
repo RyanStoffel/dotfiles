@@ -40,31 +40,6 @@ find_hm_profile() {
     printf '%s\n' "${found_paths[@]}"
 }
 
-# Find home-manager zsh plugin directories (programs.zsh.plugins method)
-find_hm_zsh_plugins() {
-    # Look for home-manager's zsh plugin directory
-    local hm_profiles=($(find_hm_profile))
-    
-    for profile in "${hm_profiles[@]}"; do
-        # Check for zsh plugins managed by home-manager
-        local zsh_plugin_dir="${profile}/share/zsh/plugins"
-        if [[ -d "$zsh_plugin_dir" ]]; then
-            echo "$zsh_plugin_dir"
-            return 0
-        fi
-        
-        # Alternative location
-        local alt_plugin_dir="${profile}/share/zsh/site-functions"
-        if [[ -d "$alt_plugin_dir" ]]; then
-            echo "$alt_plugin_dir"
-        fi
-    done
-    
-    # Also check if plugins are loaded via ZDOTDIR
-    if [[ -n "$ZDOTDIR" && -d "$ZDOTDIR/plugins" ]]; then
-        echo "$ZDOTDIR/plugins"
-    fi
-}
 
 # Dynamic plugin discovery with cross-platform support
 find_plugin() {
@@ -73,12 +48,10 @@ find_plugin() {
     # Method 1: Check if plugin is already loaded by home-manager's programs.zsh.plugins
     # These plugins are auto-sourced by home-manager, so we just need to check if they're available
     if [[ -n "$ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE" ]] && [[ "$plugin_name" == "zsh-autosuggestions" ]]; then
-        echo "already-loaded-by-home-manager"
         return 0
     fi
     
     if command -v _zsh_highlight >/dev/null 2>&1 && [[ "$plugin_name" == "zsh-syntax-highlighting" ]]; then
-        echo "already-loaded-by-home-manager"
         return 0
     fi
     
@@ -165,17 +138,14 @@ get_system_type() {
 }
 
 # Load zsh-autosuggestions
-echo "🔍 Looking for zsh-autosuggestions on $(get_system_type)..."
 if plugin_file=$(find_plugin "zsh-autosuggestions"); then
     if [[ "$plugin_file" == "already-loaded-by-home-manager" ]]; then
-        echo "✓ zsh-autosuggestions already loaded by home-manager"
         # Configure autosuggestions (they're already sourced)
         ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
         ZSH_AUTOSUGGEST_STRATEGY=(history completion)
         ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
         ZSH_AUTOSUGGEST_USE_ASYNC=true
     elif safe_source "$plugin_file"; then
-        echo "✓ Loaded zsh-autosuggestions from: $plugin_file"
         # Configure autosuggestions
         ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
         ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -184,11 +154,8 @@ if plugin_file=$(find_plugin "zsh-autosuggestions"); then
     fi
 else
     local system=$(get_system_type)
-    echo "⚠️  zsh-autosuggestions not found on $system"
     case $system in
         "nix-darwin")
-            echo "   Add to home.nix: programs.zsh.plugins or home.packages"
-            echo "   Then run: rebuild"
             ;;
         "NixOS")
             echo "   Add to home.nix: home.packages"
@@ -201,16 +168,12 @@ else
 fi
 
 # Load zsh-syntax-highlighting  
-echo "🔍 Looking for zsh-syntax-highlighting on $(get_system_type)..."
 if plugin_file=$(find_plugin "zsh-syntax-highlighting"); then
     if [[ "$plugin_file" == "already-loaded-by-home-manager" ]]; then
-        echo "✓ zsh-syntax-highlighting already loaded by home-manager"
     elif safe_source "$plugin_file"; then
-        echo "✓ Loaded zsh-syntax-highlighting from: $plugin_file"
     fi
 else
     local system=$(get_system_type)
-    echo "⚠️  zsh-syntax-highlighting not found on $system"
     case $system in
         "nix-darwin")
             echo "   Add to home.nix: programs.zsh.plugins or home.packages"  
@@ -228,13 +191,11 @@ fi
 
 # Debug information (remove this after testing)
 if [[ "${ZSH_DEBUG_PLUGINS:-}" == "1" ]]; then
-    echo "🐛 Debug: Found home-manager profiles:"
     find_hm_profile | while read profile; do
         echo "   $profile"
         ls -la "$profile/share/" 2>/dev/null | grep zsh || echo "     No zsh packages"
     done
     
-    echo "🐛 Debug: ZSH plugin functions available:"
     [[ -n "$ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE" ]] && echo "   ✓ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE is set"
     command -v _zsh_highlight >/dev/null 2>&1 && echo "   ✓ _zsh_highlight function exists"
 fi
