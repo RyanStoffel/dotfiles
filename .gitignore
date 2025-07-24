@@ -14,6 +14,6 @@ Thumbs.db
 *~
 
 # Zsh files
-.zcompdomp
-.zsh_history
-.zshrc
+zsh/.zcompdomp
+zsh/.zsh_history
+zsh/.zshrc
