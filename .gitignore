@@ -17,3 +17,5 @@ Thumbs.db
 zsh/.zcompdomp
 zsh/.zsh_history
 zsh/.zshrc
+zsh/.zsh_history
+zsh/.zcompdump*
