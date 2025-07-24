@@ -44,3 +44,6 @@ elif [[ -f /etc/nixos/configuration.nix ]]; then
     alias rebuild-test='sudo nixos-rebuild test --flake /home/rstoffel/.dotfiles/nixos-artemis'
     alias rebuild-home='home-manager switch --flake /home/rstoffel/.dotfiles/nixos-artemis'
 fi
+
+# Salesforce wrapper alias (Artmis only)
+alias sf='sf-wrapper'
