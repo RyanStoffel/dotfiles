@@ -3,7 +3,7 @@
 	url = git@github.com:RyanStoffel/nvim.git
 [submodule "nixos-apollo"]
 	path = nixos-apollo
-	url = git@github.com:RyanStoffel/nixos-apollo.git
+	url = git@github.com:RyanStoffel/nix-darwin-config.git
 [submodule "nixos-artemis"]
 	path = nixos-artemis
 	url = git@github.com:RyanStoffel/nixos-artemis.git
