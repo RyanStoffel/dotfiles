@@ -66,11 +66,6 @@ find_plugin() {
         search_paths+=("${profile}/share")
     done
     
-    # Add home-manager zsh plugin directories
-    local hm_zsh_plugins=($(find_hm_zsh_plugins))
-    for plugin_dir in "${hm_zsh_plugins[@]}"; do
-        search_paths+=("$plugin_dir")
-    done
     
     # Add additional common paths
     search_paths+=(
@@ -187,17 +182,6 @@ else
             echo "   Try: nix-env -iA nixpkgs.zsh-syntax-highlighting"
             ;;
     esac
-fi
-
-# Debug information (remove this after testing)
-if [[ "${ZSH_DEBUG_PLUGINS:-}" == "1" ]]; then
-    find_hm_profile | while read profile; do
-        echo "   $profile"
-        ls -la "$profile/share/" 2>/dev/null | grep zsh || echo "     No zsh packages"
-    done
-    
-    [[ -n "$ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE" ]] && echo "   ✓ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE is set"
-    command -v _zsh_highlight >/dev/null 2>&1 && echo "   ✓ _zsh_highlight function exists"
 fi
 
 # Plugin configuration
