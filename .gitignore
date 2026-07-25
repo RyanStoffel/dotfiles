@@ -1,0 +1,21 @@
+# Nix build artifacts
+result
+result-*
+
+# home-manager backups
+*.hm-backup
+
+# Secrets and machine-runtime state — NEVER commit
+**/auth.json
+**/sessions/
+**/node_modules/
+**/models-store.json
+*.secret
+.env
+.env.*
+
+# age private key, if ever placed in-tree
+**/keys.txt
+
+# macOS cruft
+.DS_Store
