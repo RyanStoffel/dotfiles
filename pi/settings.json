@@ -1,5 +1,5 @@
 {
-  "theme": "dark",
+  "theme": "everforest",
   "quietStartup": true,
 
   "defaultProvider": "anthropic",
@@ -20,10 +20,7 @@
     "git:https://github.com/Rahularya01/pi-antigravity.git"
   ],
 
-  "skills": ["~/.config/pi/skills"],
-  "prompts": ["~/.config/pi/prompts"],
   "enableSkillCommands": true,
-
   "defaultProjectTrust": "ask",
   "warnings": { "anthropicExtraUsage": false }
 }
