@@ -1,0 +1,56 @@
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+
+background = 2d353b
+foreground = d3c6aa
+cursor-color = e69875
+cursor-text = 543a48
+selection-background = 543a48
+selection-foreground = d3c6aa
+
+palette = 0=#7a8478
+palette = 1=#e67e80
+palette = 2=#a7c080
+palette = 3=#dbbc7f
+palette = 4=#7fbbb3
+palette = 5=#d699b6
+palette = 6=#83c092
+palette = 7=#efebd4
+palette = 8=#a6b0a0
+palette = 9=#f85552
+palette = 10=#8da101
+palette = 11=#dfa000
+palette = 12=#3a94c5
+palette = 13=#df69ba
+palette = 14=#35a77c
+palette = 15=#fdf6e3
+
+cursor-style = block
+cursor-style-blink = false
+
+window-padding-x = 10
+window-padding-y = 10
+window-decoration = true
+
+macos-titlebar-style = hidden
+macos-option-as-alt = true
+
+shell-integration = zsh
+shell-integration-features = cursor,sudo,title
+
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+alt+h=goto_split:left
+keybind = cmd+alt+l=goto_split:right
+keybind = cmd+alt+j=goto_split:down
+keybind = cmd+alt+k=goto_split:up
+
+quick-terminal-position = top
+quick-terminal-size = 75%
+quick-terminal-screen = main
+quick-terminal-animation-duration = 0.15
+quick-terminal-autohide = true
+
+initial-window = false
+
+keybind = global:alt+space=toggle_quick_terminal

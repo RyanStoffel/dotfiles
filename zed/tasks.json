@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Pi Agent: Interactive",
+    "command": "pi",
+    "args": [],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": true,
+    "reveal": "always"
+  },
+  {
+    "label": "Pi Agent: Work on Current File",
+    "command": "pi",
+    "args": ["@$ZED_FILE"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": true,
+    "reveal": "always"
+  },
+  {
+    "label": "Pi Agent: Continue Session",
+    "command": "pi",
+    "args": ["--continue"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": true,
+    "reveal": "always"
+  }
+]
