@@ -11,4 +11,6 @@ in
   home.file.".config/pi/AGENTS.md".source = link "AGENTS.md";
   home.file.".config/pi/skills".source = link "skills";
   home.file.".config/pi/prompts".source = link "prompts";
+  home.file.".config/pi/themes".source = link "themes";
+  home.file.".config/pi/extensions".source = link "extensions";
 }
