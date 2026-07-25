@@ -1,0 +1,29 @@
+{
+  "theme": "dark",
+  "quietStartup": true,
+
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-sonnet-5",
+  "defaultThinkingLevel": "high",
+
+  "enabledModels": [
+    "anthropic/claude-sonnet-5",
+    "anthropic/claude-opus-4-8",
+    "openai-codex/gpt-5.6-terra",
+    "openai-codex/gpt-5.4",
+    "antigravity/gemini-3.6-flash",
+    "antigravity/gemini-3.1-pro"
+  ],
+
+  "packages": [
+    "git:https://github.com/pankajudhas81/pi-claude-auth.git",
+    "git:https://github.com/Rahularya01/pi-antigravity.git"
+  ],
+
+  "skills": ["~/.config/pi/skills"],
+  "prompts": ["~/.config/pi/prompts"],
+  "enableSkillCommands": true,
+
+  "defaultProjectTrust": "ask",
+  "warnings": { "anthropicExtraUsage": false }
+}
