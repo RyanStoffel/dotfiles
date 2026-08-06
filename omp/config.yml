@@ -1,0 +1,79 @@
+theme: 
+  dark: everforest
+startup: 
+  quiet: true
+defaultThinkingLevel: auto
+symbolPreset: nerd
+statusLine:
+  preset: custom
+  separator: powerline
+  sessionAccent: true
+  leftSegments:
+    - pi
+    - model
+    - mode
+    - path
+    - git
+    - pr
+  rightSegments:
+    - session_name
+    - cost
+    - context_pct
+    - time
+  segmentOptions:
+    model:
+      showThinkingLevel: true
+    path:
+      abbreviate: true
+      maxLength: 40
+      stripWorkPrefix: true
+    git:
+      showBranch: true
+      showStaged: true
+      showUnstaged: true
+      showUntracked: true
+    time:
+      format: "24h"
+      showSeconds: false
+modelProviderOrder: 
+  - anthropic
+  - openai-codex
+  - google-antigravity
+tools: 
+  approvalMode: always-ask
+providers: 
+  webSearchOrder: 
+    - anthropic
+    - perplexity
+    - gemini
+    - codex
+    - xai
+    - zai
+    - exa
+    - tinyfish
+    - jina
+    - kagi
+    - tavily
+    - firecrawl
+    - brave
+    - kimi
+    - parallel
+    - synthetic
+    - searxng
+    - startpage
+    - duckduckgo
+    - ecosia
+    - google
+    - mojeek
+    - public
+setupVersion: 1
+modelRoles:
+  default: anthropic/claude-sonnet-5
+enabledModels:
+  - anthropic/claude-sonnet-5
+  - anthropic/claude-opus-4-8
+  - anthropic/claude-opus-5
+  - google-antigravity/gemini-3.6-flash
+  - openai-codex/gpt-5.6-sol
+  - openai-codex/gpt-5.6-luna
+  - openai-codex/gpt-5.6-terra

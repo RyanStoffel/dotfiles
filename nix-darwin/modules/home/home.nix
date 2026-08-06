@@ -7,6 +7,7 @@
     ./launchd.nix
     ./zed.nix
     ./pi.nix
+    ./omp.nix
   ];
 
   home.username = "ryanstoffel";

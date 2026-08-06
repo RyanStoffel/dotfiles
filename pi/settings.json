@@ -1,26 +1,28 @@
 {
   "theme": "everforest",
   "quietStartup": true,
-
   "defaultProvider": "anthropic",
   "defaultModel": "claude-sonnet-5",
   "defaultThinkingLevel": "high",
-
   "enabledModels": [
     "anthropic/claude-sonnet-5",
     "anthropic/claude-opus-4-8",
-    "openai-codex/gpt-5.6-terra",
-    "openai-codex/gpt-5.4",
+    "anthropic/claude-opus-5",
     "antigravity/gemini-3.6-flash",
-    "antigravity/gemini-3.1-pro"
+    "openai-codex/gpt-5.6-sol",
+    "openai-codex/gpt-5.6-luna",
+    "openai-codex/gpt-5.6-terra"
   ],
-
   "packages": [
     "git:https://github.com/pankajudhas81/pi-claude-auth.git",
-    "git:https://github.com/Rahularya01/pi-antigravity.git"
+    "git:https://github.com/Rahularya01/pi-antigravity.git",
+    "npm:pi-web-access@0.13.0",
+    "npm:pi-mcp-adapter@2.14.0"
   ],
-
   "enableSkillCommands": true,
   "defaultProjectTrust": "ask",
-  "warnings": { "anthropicExtraUsage": false }
+  "warnings": {
+    "anthropicExtraUsage": false
+  },
+  "lastChangelogVersion": "0.83.0"
 }
