@@ -34,6 +34,10 @@
 
       # utilities
       "alt-tab"
+      "atoll"
+
+      # media
+      "spotify"
     ];
 
     brews = [
@@ -47,7 +51,7 @@
 
     masApps = {
       "Windows App" = 1295203466;
-      "Xcode"       = 497799835;
+      "Xcode" = 497799835;
     };
   };
 }
