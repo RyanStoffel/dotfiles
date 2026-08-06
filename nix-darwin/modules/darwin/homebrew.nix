@@ -38,6 +38,7 @@
       # utilities
       "alt-tab"
       "atoll"
+      "ryanstoffel/tap/caffeine"
 
       # media
       "spotify"
