@@ -8,6 +8,7 @@
 
     taps = [
       "FelixKratz/formulae"
+      "can1357/tap"
     ];
 
     casks = [
@@ -15,37 +16,23 @@
       "raycast"
 
       # terminal
-      "ghostty"
       "cmux"
+      "font-jetbrains-mono-nerd-font"
 
       # dev
       "tailscale-app"
       "visual-studio-code"
-      "zed"
       "claude"
       "claude-code"
-      "codex"
       "github"
-      "google-gemini"
-      "t3-code@nightly"
+      "codex"
       "antigravity-cli"
-      "github-copilot-app"
-      "linear"
-
-      # capture
-      "cleanshot"
-
-      # monitoring
-      "stats"
 
       # browsers
       "helium-browser"
+      "thebrowsercompany-dia"
 
       # utilities
-      "the-unarchiver"
-      "appcleaner"
-      "keka"
-      "rectangle"
       "alt-tab"
     ];
 
@@ -55,6 +42,7 @@
       "opencode"
       "glab"
       "pi-coding-agent"
+      "omp"
     ];
 
     masApps = {
@@ -62,14 +50,4 @@
       "Xcode"       = 497799835;
     };
   };
-  system.activationScripts.postActivation.text = ''
-    echo "Installing opencode-with-claude via user npm..."
-    sudo -H -u ryanstoffel bash -c '
-      export HOME=/Users/ryanstoffel
-      export NPM_CONFIG_PREFIX="$HOME/.npm-global"
-      export PATH="${pkgs.nodejs}/bin:$PATH"
-      mkdir -p "$NPM_CONFIG_PREFIX"
-      ${pkgs.nodejs}/bin/npm install -g opencode-with-claude
-    '
-  '';
 }

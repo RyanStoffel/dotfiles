@@ -1,4 +1,4 @@
-font-family = JetBrainsMono Nerd Font
+font-family = JetBrainsMono Nerd Font Mono
 font-size = 14
 
 background = 2d353b
@@ -32,7 +32,7 @@ window-padding-x = 10
 window-padding-y = 10
 window-decoration = true
 
-macos-titlebar-style = hidden
+macos-titlebar-style = transparent
 macos-option-as-alt = true
 
 shell-integration = zsh
@@ -45,12 +45,8 @@ keybind = cmd+alt+l=goto_split:right
 keybind = cmd+alt+j=goto_split:down
 keybind = cmd+alt+k=goto_split:up
 
-quick-terminal-position = top
-quick-terminal-size = 75%
-quick-terminal-screen = main
-quick-terminal-animation-duration = 0.15
-quick-terminal-autohide = true
-
-initial-window = false
-
-keybind = global:alt+space=toggle_quick_terminal
+# Scrollback (MacBook has no PageUp key)
+keybind = cmd+up=scroll_page_up
+keybind = cmd+down=scroll_page_down
+keybind = cmd+shift+up=scroll_to_top
+keybind = cmd+shift+down=scroll_to_bottom
