@@ -9,7 +9,9 @@ result-*
 **/auth.json
 **/sessions/
 **/node_modules/
+**/node_modules
 **/models-store.json
+*.yml.lock
 *.secret
 .env
 .env.*
