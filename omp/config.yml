@@ -40,7 +40,7 @@ modelProviderOrder:
   - openai-codex
   - google-antigravity
 tools: 
-  approvalMode: always-ask
+  approvalMode: yolo
 providers: 
   webSearchOrder: 
     - anthropic
