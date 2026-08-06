@@ -14,6 +14,7 @@
       cd = "z";
       dots = "cd ~/.dotfiles";
       sshvm = "TERM=xterm-256color ssh vm";
+      ai = "omp";
     };
   };
 
