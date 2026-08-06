@@ -8,7 +8,10 @@
 
     taps = [
       "FelixKratz/formulae"
-      "can1357/tap"
+      {
+        name = "can1357/tap";
+        trusted = true;
+      }
     ];
 
     casks = [
