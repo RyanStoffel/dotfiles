@@ -92,5 +92,16 @@
     "pageBg": "#2d353b",
     "cardBg": "#343f44",
     "infoBg": "#3d484d"
+  },
+  "symbols": {
+    "preset": "nerd",
+    "overrides": {
+      "icon.model": "",
+      "icon.folder": "",
+      "icon.branch": "",
+      "icon.context": "ctx",
+      "icon.time": "",
+      "sep.pipe": " | "
+    }
   }
 }

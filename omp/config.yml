@@ -6,23 +6,18 @@ defaultThinkingLevel: auto
 symbolPreset: nerd
 statusLine:
   preset: custom
-  separator: powerline
+  separator: pipe
   sessionAccent: true
   leftSegments:
-    - pi
     - model
-    - mode
     - path
     - git
-    - pr
   rightSegments:
-    - session_name
-    - cost
+    - usage
     - context_pct
-    - time
   segmentOptions:
     model:
-      showThinkingLevel: true
+      showThinkingLevel: false
     path:
       abbreviate: true
       maxLength: 40
@@ -31,10 +26,7 @@ statusLine:
       showBranch: true
       showStaged: true
       showUnstaged: true
-      showUntracked: true
-    time:
-      format: "24h"
-      showSeconds: false
+      showUntracked: false
 modelProviderOrder: 
   - anthropic
   - openai-codex
