@@ -16,15 +16,15 @@ encrypted with **sops-nix**.
 │   ├── flake.nix
 │   └── modules/
 │       ├── darwin/       # system: packages, homebrew, macOS defaults, security, fonts
-│       └── home/         # home-manager: shell, git, ghostty, zed, pi, launchd
+│       └── home/         # home-manager: shell, git, finder, zed, omp, ghostty, launchd
 ├── zed/                  # Zed config (settings.json, keymap.json, tasks.json)
-├── ghostty/config        # Ghostty terminal config
-└── pi/                   # pi coding-agent config (settings, rules, skills, prompts)
+├── ghostty/              # Ghostty terminal config (Catppuccin Mocha theme)
+└── omp/                  # omp (oh-my-pi) config, rules, themes, and custom skills
 ```
 
-Config files under `zed/`, `ghostty/`, `pi/` are symlinked into `~/.config/*` via
-home-manager `mkOutOfStoreSymlink`, so edits take effect immediately — no rebuild
-needed for config-only changes.
+Config files under `zed/`, `ghostty/`, and `omp/` are symlinked into
+`~/.config/*` and `~/.omp/agent` via home-manager `mkOutOfStoreSymlink`, so
+edits take effect immediately — no rebuild needed for config-only changes.
 
 ## Usage
 
@@ -53,4 +53,4 @@ git clone https://github.com/RyanStoffel/dotfiles.git ~/.dotfiles
 
 `.sops.yaml` holds the public age recipient derived from `~/.ssh/id_ed25519.pub`.
 sops-nix decrypts at activation using the matching SSH private key. Runtime state
-(pi `auth.json`, `sessions/`, `node_modules`) is gitignored, never committed.
+(omp `auth.json`, `sessions/`, `node_modules`) is gitignored, never committed.

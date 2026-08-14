@@ -3,11 +3,11 @@
   imports = [
     ./shell.nix
     ./git.nix
-    ./ghostty.nix
+    ./finder.nix
     ./launchd.nix
     ./zed.nix
-    ./pi.nix
     ./omp.nix
+    ./ghostty.nix
   ];
 
   home.username = "ryanstoffel";

@@ -65,6 +65,5 @@
     # editors
     vim
     neovim
-    emacs
   ];
 }

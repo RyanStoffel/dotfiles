@@ -31,11 +31,24 @@
       "codex"
       "antigravity-cli"
 
+      # latex
+      "mactex-no-gui"
+      "texifier"
+
       # browsers
-      "helium-browser"
       "thebrowsercompany-dia"
 
+      # communication
+      "zoom"
+      "microsoft-teams"
+      "slack"
+
+      # notes
+      "obsidian"
+      "notion"
+
       # utilities
+      "1password"
       "alt-tab"
       "atoll"
       "ryanstoffel/tap/caffeine"
@@ -47,9 +60,7 @@
     brews = [
       "mas"
       "ollama"
-      "opencode"
       "glab"
-      "pi-coding-agent"
       "omp"
     ];
 
