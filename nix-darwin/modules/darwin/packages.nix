@@ -53,7 +53,7 @@
     just
     nixpkgs-fmt
 
-    # node runtime (pi-acp adapter for native pi-in-Zed runs via npx)
+    # Node runtime with npm and npx (OMP adapters and Postplan CLI)
     nodejs_22
 
     # secrets management
