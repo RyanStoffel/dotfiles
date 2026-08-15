@@ -30,7 +30,6 @@
       "github"
       "codex"
       "antigravity-cli"
-      "tmux"
 
       # latex
       "mactex-no-gui"
@@ -63,6 +62,7 @@
       "ollama"
       "glab"
       "omp"
+      "tmux"
     ];
 
     masApps = {
