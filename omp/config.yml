@@ -1,45 +1,45 @@
-theme:
+theme: 
   dark: catppuccin-mocha
   light: light
-skills:
-  customDirectories:
+skills: 
+  customDirectories: 
     - ~/.dotfiles/omp/skills
-startup:
+startup: 
   quiet: true
 defaultThinkingLevel: auto
 symbolPreset: nerd
-statusLine:
+statusLine: 
   preset: custom
   separator: powerline-thin
   sessionAccent: true
   transparent: true
-  leftSegments:
+  leftSegments: 
     - model
     - path
     - git
-  rightSegments:
+  rightSegments: 
     - usage
     - context_pct
-  segmentOptions:
-    model:
+  segmentOptions: 
+    model: 
       showThinkingLevel: false
-    path:
+    path: 
       abbreviate: true
       maxLength: 40
       stripWorkPrefix: true
-    git:
+    git: 
       showBranch: true
       showStaged: true
       showUnstaged: true
       showUntracked: false
-modelProviderOrder:
+modelProviderOrder: 
   - anthropic
   - openai-codex
   - google-antigravity
-tools:
+tools: 
   approvalMode: yolo
-providers:
-  webSearchOrder:
+providers: 
+  webSearchOrder: 
     - anthropic
     - perplexity
     - gemini
@@ -64,9 +64,9 @@ providers:
     - mojeek
     - public
 setupVersion: 1
-modelRoles:
-  default: openai-codex/gpt-5.6-sol
-enabledModels:
+modelRoles: 
+  default: google-antigravity/gemini-3.6-flash
+enabledModels: 
   - anthropic/claude-sonnet-5
   - anthropic/claude-opus-4-8
   - anthropic/claude-opus-5
@@ -74,5 +74,5 @@ enabledModels:
   - openai-codex/gpt-5.6-sol
   - openai-codex/gpt-5.6-luna
   - openai-codex/gpt-5.6-terra
-dev:
+dev: 
   autoqaConsent: granted
