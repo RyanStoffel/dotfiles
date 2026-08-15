@@ -30,6 +30,7 @@
       "github"
       "codex"
       "antigravity-cli"
+      "tmux"
 
       # latex
       "mactex-no-gui"
