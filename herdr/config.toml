@@ -18,6 +18,7 @@ shell_mode = "login"
 # herdr matches Ghostty rather than fighting it. Stock default is catppuccin.
 name = "terminal"
 
+auto_switch = false
 [theme.custom]
 # "reset" leaves panel backgrounds transparent, so panels sit on the
 # terminal's true black instead of a lighter painted panel color.
@@ -41,6 +42,7 @@ hide_tab_bar_when_single_tab = true
 # Stock sidebar rows lead with state_icon, which renders colored emoji circles.
 # state_text spells the same state out as a word instead.
 agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = true
 [ui.sidebar.agents]
 rows = [["state_text", "workspace", "tab"], ["agent"]]
 
@@ -50,3 +52,6 @@ rows = [["state_text", "workspace"], ["branch", "git_status"]]
 [ui.sound]
 # No mp3 playback on agent state changes.
 enabled = false
+
+[ui.toast]
+delivery = "herdr"
