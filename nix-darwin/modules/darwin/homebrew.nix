@@ -47,6 +47,7 @@
       "zoom"
       "microsoft-teams"
       "slack"
+      "vesktop"
 
       # notes
       "obsidian"

@@ -11,6 +11,7 @@
     ./tmux.nix
     ./zellij.nix
     ./herdr.nix
+    ./vesktop.nix
   ];
 
   home.username = "ryanstoffel";
