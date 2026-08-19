@@ -58,6 +58,7 @@
       "alt-tab"
       "atoll"
       "ryanstoffel/tap/caffeine"
+      "ryanstoffel/tap/tidy"
 
       # media
       "spotify"
