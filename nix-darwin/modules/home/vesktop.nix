@@ -1,15 +1,24 @@
 { config, lib, ... }:
 let
   icon = "${config.home.homeDirectory}/.dotfiles/nix-darwin/assets/vesktop.icns";
-  app = "/Applications/Vesktop.app";
+  cask = "/Applications/Vesktop.app";
+  app = "/Applications/Discord.app";
 in
 {
-  # Vesktop ships the Vencord logo; swap it for a dark-mode Discord mark.
-  # The icon is stored as the bundle's Finder custom icon (a top-level `Icon\r`
-  # file), which sits outside Contents/ and so leaves the notarized seal intact.
-  # A cask upgrade replaces the bundle and drops it, so this reapplies on every
-  # rebuild.
-  home.activation.vesktopIcon = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+  # Vesktop is the Discord client here, so it lives under the Discord name and
+  # mark. Both changes are external to the bundle's Contents/, leaving the
+  # notarized seal intact: the name is just the bundle filename, and the icon is
+  # a top-level `Icon\r` Finder custom icon.
+  #
+  # The cask installs to Vesktop.app, so a reinstall resurrects that path; the
+  # rename below reapplies on every rebuild, and a freshly installed bundle
+  # replaces the renamed one.
+  home.activation.vesktopApp = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    if [ -d "${cask}" ]; then
+      run rm -rf "${app}"
+      run mv "${cask}" "${app}"
+    fi
+
     if [ -d "${app}" ] && [ -f "${icon}" ]; then
       run /usr/bin/osascript -l JavaScript \
         -e 'ObjC.import("AppKit")' \
