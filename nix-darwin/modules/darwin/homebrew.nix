@@ -41,6 +41,7 @@
 
       # browsers
       "thebrowsercompany-dia"
+      "zen"
 
       # communication
       "zoom"
