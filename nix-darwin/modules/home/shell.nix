@@ -15,6 +15,32 @@
       dots = "cd ~/.dotfiles";
       sshvm = "TERM=xterm-256color ssh vm";
       ai = "omp";
+      tdev = "$HOME/.local/bin/tmux-dev";
+      tp = "$HOME/.local/bin/tmux-project";
+      t = "$HOME/.local/bin/tmux-project";
+      zj = "zellij";
+      zdev = "zellij -s dev -n dev";
+      h = "herdr";
+      hp = "$HOME/.local/bin/herdr-project";
+
+      # Personal project aliases
+      ai-usage = "$HOME/.local/bin/herdr-project personal/Ai-Usage";
+      atoll = "$HOME/.local/bin/herdr-project personal/Atoll";
+      better-instagram = "$HOME/.local/bin/herdr-project personal/better-instagram";
+      caffeine = "$HOME/.local/bin/herdr-project personal/caffeine";
+      files-stoffel = "$HOME/.local/bin/herdr-project personal/files.stoffel.org";
+      forge = "$HOME/.local/bin/herdr-project personal/forge";
+      homebrew-tap = "$HOME/.local/bin/herdr-project personal/homebrew-tap";
+      job-tracker = "$HOME/.local/bin/herdr-project personal/job-application-tracker";
+      leaderboard = "$HOME/.local/bin/herdr-project personal/leaderboard-service";
+      portfolio = "$HOME/.local/bin/herdr-project personal/rstoffel-portfolio";
+
+      # Work project aliases
+      wiss = "$HOME/.local/bin/herdr-project work/WISSv5-Zeroclaw-VM";
+      wiss-wiki = "$HOME/.local/bin/herdr-project work/WISSv5-Zeroclaw-VM.wiki";
+      controller = "$HOME/.local/bin/herdr-project work/controller_2.2";
+      wiss-installer = "$HOME/.local/bin/herdr-project work/wiss-agent-installer";
+      wiss-packages = "$HOME/.local/bin/herdr-project work/wiss-packages";
     };
   };
 

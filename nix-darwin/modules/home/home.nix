@@ -8,12 +8,18 @@
     ./zed.nix
     ./omp.nix
     ./ghostty.nix
+    ./tmux.nix
+    ./zellij.nix
+    ./herdr.nix
   ];
 
   home.username = "ryanstoffel";
   home.homeDirectory = "/Users/ryanstoffel";
   home.stateVersion = "24.05";
-  home.sessionPath = [ "$HOME/.npm-global/bin" ];
+  home.sessionPath = [
+    "$HOME/.npm-global/bin"
+    "$HOME/.local/bin"
+  ];
 
   # Single home for all code projects. No code lives outside ~/Developer.
   home.activation.createDevFolders =

@@ -12,6 +12,10 @@
         name = "can1357/tap";
         trusted = true;
       }
+      {
+        name = "ryanstoffel/tap";
+        trusted = true;
+      }
     ];
 
     casks = [
@@ -55,6 +59,7 @@
 
       # media
       "spotify"
+      "gamehub"
     ];
 
     brews = [
@@ -63,6 +68,8 @@
       "glab"
       "omp"
       "tmux"
+      # Agent multiplexer. Homebrew tracks 0.8.0; nixpkgs still pins 0.7.1.
+      "herdr"
     ];
 
     masApps = {

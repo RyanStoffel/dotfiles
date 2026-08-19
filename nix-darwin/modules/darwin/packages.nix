@@ -42,6 +42,9 @@
     # docs
     tealdeer
 
+    # terminal multiplexer
+    zellij
+
     # misc
     tokei
     sd

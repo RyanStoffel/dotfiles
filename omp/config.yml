@@ -65,7 +65,7 @@ providers:
     - public
 setupVersion: 1
 modelRoles: 
-  default: google-antigravity/gemini-3.6-flash
+  default: anthropic/claude-opus-5
 enabledModels: 
   - anthropic/claude-sonnet-5
   - anthropic/claude-opus-4-8
