@@ -6,11 +6,12 @@ skills:
     - ~/.dotfiles/omp/skills
 startup: 
   quiet: true
+  showSplash: true
 defaultThinkingLevel: auto
 symbolPreset: nerd
 statusLine: 
   preset: custom
-  separator: powerline-thin
+  separator: slash
   sessionAccent: true
   transparent: true
   leftSegments: 
@@ -32,6 +33,8 @@ statusLine:
       showStaged: true
       showUnstaged: true
       showUntracked: false
+  compactThinkingLevel: true
+  showHookStatus: true
 modelProviderOrder: 
   - anthropic
   - openai-codex
@@ -76,3 +79,47 @@ enabledModels:
   - openai-codex/gpt-5.6-terra
 dev: 
   autoqaConsent: granted
+terminal: 
+  showProgress: false
+tui: 
+  textSizing: false
+  renderMermaid: true
+  codexResetFireworks: true
+  hyperlinks: auto
+  tight: false
+display: 
+  shimmer: kitt
+  hideToolActivity: false
+  showTokenUsage: false
+steeringMode: one-at-a-time
+error: 
+  notify: "on"
+stt: 
+  enabled: false
+autoResume: true
+power: 
+  sleepPrevention: idle
+contextPromotion: 
+  enabled: false
+branchSummary: 
+  enabled: true
+memory: 
+  backend: local
+autolearn: 
+  enabled: true
+edit: 
+  mode: hashline
+readLineNumbers: true
+read: 
+  renderMarkdown: true
+lsp: 
+  formatOnWrite: true
+bash: 
+  autoBackground: 
+    enabled: true
+checkpoint: 
+  enabled: true
+github: 
+  enabled: true
+task: 
+  eager: default
