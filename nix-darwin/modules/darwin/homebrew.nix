@@ -37,10 +37,8 @@
 
       # latex
       "mactex-no-gui"
-      "texifier"
 
       # browsers
-      "thebrowsercompany-dia"
       "zen"
 
       # communication
@@ -71,7 +69,6 @@
       "glab"
       "omp"
       "tmux"
-      # Agent multiplexer. Homebrew tracks 0.8.0; nixpkgs still pins 0.7.1.
       "herdr"
     ];
 
