@@ -1,6 +1,6 @@
 theme: 
-  dark: catppuccin-mocha
-  light: light
+  dark: crt-mono
+  light: crt-mono
 skills: 
   customDirectories: 
     - ~/.dotfiles/omp/skills

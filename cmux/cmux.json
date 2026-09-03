@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/manaflow-ai/cmux/main/web/data/cmux.schema.json",
+  "schemaVersion": 1,
+  "paneBorderColor": "#303030",
+  "activePaneBorderColor": "#FFB000",
+  "app": {
+    "appearance": "dark"
+  },
+  "terminal": {
+    "adaptiveDefaultTheme": false,
+    "showScrollBar": false
+  },
+  "sidebarAppearance": {
+    "matchTerminalBackground": true,
+    "tintColor": "#000000",
+    "tintOpacity": 0
+  },
+  "workspaceColors": {
+    "selectionColor": "#1C1C1C",
+    "notificationBadgeColor": "#FFB000",
+    "colors": {
+      "Amber": "#FFB000",
+      "Ember": "#C98A2E",
+      "Green": "#4A9E5C",
+      "Red": "#C94F42",
+      "Teal": "#4F8F8F",
+      "Bone": "#B8B8B8",
+      "Ash": "#6F6F6F",
+      "Iron": "#4A4A4A"
+    }
+  },
+  "notifications": {
+    "paneFlashColor": "#FFB000"
+  },
+  "shortcuts": {
+    "bindings": {
+      "saveFilePreview": {
+        "first": {
+          "command": false,
+          "control": false,
+          "key": "",
+          "option": false,
+          "shift": false
+        }
+      },
+      "toggleSidebar": {
+        "first": {
+          "command": true,
+          "control": false,
+          "key": "s",
+          "keyCode": 1,
+          "option": false,
+          "shift": false
+        }
+      }
+    }
+  }
+}

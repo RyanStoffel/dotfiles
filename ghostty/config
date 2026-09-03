@@ -1,7 +1,57 @@
-# Ghostty config — https://ghostty.org/docs/config/reference
+# Ghostty config: https://ghostty.org/docs/config/reference
 # Symlinked live into ~/.config/ghostty/config via nix-darwin/modules/home/ghostty.nix
+# Read by libghostty inside cmux, so this file is the single source of truth for
+# the terminal palette. Every terminal tool below inherits it through ANSI.
+#
+# crt-mono palette. Grayscale chrome, amber accent, color only where it carries
+# meaning (green ok, red error, amber warn, teal reference).
+#
+#   ink0  #000000  background            amber      #ffb000  accent, cursor, active
+#   ink1  #101010  raised surface        amber dim  #c98a2e  de-emphasized accent
+#   ink2  #1c1c1c  selection, low border green      #4a9e5c  ok, added, valid
+#   ink3  #303030  border                green br   #6ede8a
+#   ink4  #4a4a4a  dim, comments         red        #c94f42  error, removed
+#   ink5  #6f6f6f  muted secondary       red br     #ff6a5c
+#   ink6  #9a9a9a  subtext               teal       #4f8f8f  reference, info
+#   ink7  #b8b8b8  normal text           teal br    #79c4c4
+#   ink8  #e4e4e4  foreground            steel      #5878a0  rarely used
+#   ink9  #ffffff  emphasis              plum       #8f6f9e  rarely used
+#
+# Any theme directive here suppresses cmux's own managed palette, which is why
+# no `theme =` line is set: the explicit palette below wins in both apps.
 
-theme = Catppuccin Mocha
+background = #000000
+foreground = #e4e4e4
+
+# Amber block cursor on black is the 80s tell. Everything else stays gray.
+cursor-color = #ffb000
+cursor-text = #000000
+cursor-style = block
+cursor-style-blink = false
+
+selection-background = #303030
+selection-foreground = #ffffff
+
+palette = 0=#000000
+palette = 1=#c94f42
+palette = 2=#4a9e5c
+palette = 3=#c98a2e
+palette = 4=#5878a0
+palette = 5=#8f6f9e
+palette = 6=#4f8f8f
+palette = 7=#b8b8b8
+palette = 8=#4a4a4a
+palette = 9=#ff6a5c
+palette = 10=#6ede8a
+palette = 11=#ffb000
+palette = 12=#7fa8d0
+palette = 13=#b898c6
+palette = 14=#79c4c4
+palette = 15=#ffffff
+
+# Fix: stock behavior promotes any bold text to the bright palette, which turns
+# bold gray into white and undoes the monotone ramp.
+bold-is-bright = false
 
 font-family = JetBrainsMono Nerd Font
 font-size = 14
@@ -10,8 +60,11 @@ window-padding-x = 8
 window-padding-y = 6
 window-decoration = true
 
-cursor-style = block
-cursor-style-blink = false
+# Keep window chrome on the palette instead of the macOS accent color.
+window-theme = ghostty
+
+# Dim the inactive half of a split so focus reads without a colored border.
+unfocused-split-opacity = 0.8
 
 mouse-hide-while-typing = true
 

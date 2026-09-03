@@ -8,9 +8,12 @@
     ./zed.nix
     ./omp.nix
     ./ghostty.nix
+    ./cmux.nix
     ./tmux.nix
     ./zellij.nix
     ./herdr.nix
+    ./btop.nix
+    ./bat.nix
     ./vesktop.nix
   ];
 

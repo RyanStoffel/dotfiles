@@ -14,7 +14,7 @@
     broot
 
     # file viewing
-    bat
+    # bat is owned by home-manager (modules/home/shell.nix) for its theme.
     eza
     jless
 
@@ -26,8 +26,8 @@
     difftastic
 
     # system monitoring
+    # btop is owned by home-manager (modules/home/btop.nix) for its theme.
     htop
-    btop
     procs
     dust
     duf
