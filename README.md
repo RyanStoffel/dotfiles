@@ -30,17 +30,25 @@ edits take effect immediately. No rebuild needed for config-only changes.
 
 ## Theme
 
-One palette, `crt-mono`, defined once in `ghostty/config` and inherited by
-everything that renders in a terminal. Black background, grayscale chrome,
-amber accent, and color only where it carries meaning: green for ok, added, or
-a command that resolves; red for errors and removals; amber for warnings and
-focus; teal for links and references.
+One palette, `apple-terminal`, defined once in `ghostty/config` and inherited
+by everything that renders in a terminal. The 16 ANSI values, the text grays,
+the selection and the cursor are Apple's own, lifted from Terminal.app's
+`Clear Dark` profile (`Terminal.app/Contents/Resources/Initial Settings/`,
+cross checked against a live OSC 4 query). Apple's values are already
+desaturated, so the result reads near-monotone with color only where it carries
+meaning: green for ok, added, or a command that resolves; red for errors and
+removals; yellow for warnings and marked state; cyan for links and types;
+bright white for focus.
+
+Two deliberate deviations from Apple: the background is true black instead of
+`#191d27`, and Apple's blue-gray `ANSI 0`/`ANSI 8` double as the border and dim
+grays that tool chrome needs.
 
 `ghostty/config` sets all 16 ANSI slots, so tools configured against ANSI names
-(zsh syntax highlighting, bat, delta, herdr) re-theme themselves when that file
-changes. Tools that only accept hex (`cmux/cmux.json`, fzf, lazygit, btop,
-tmux, zellij, omp) repeat the palette literally and must be updated alongside
-it.
+(zsh syntax highlighting, starship, eza, herdr) re-theme themselves when that
+file changes. Tools that only accept hex (`cmux/cmux.json`, fzf, bat, delta,
+lazygit, btop, tmux, zellij, omp) repeat the palette literally and must be
+updated alongside it.
 
 ## Usage
 

@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/manaflow-ai/cmux/main/web/data/cmux.schema.json",
   "schemaVersion": 1,
-  "paneBorderColor": "#303030",
-  "activePaneBorderColor": "#FFB000",
+  "paneBorderColor": "#35424C",
+  "activePaneBorderColor": "#E5EFF5",
   "app": {
     "appearance": "dark"
   },
@@ -16,21 +16,21 @@
     "tintOpacity": 0
   },
   "workspaceColors": {
-    "selectionColor": "#1C1C1C",
-    "notificationBadgeColor": "#FFB000",
+    "selectionColor": "#273D4C",
+    "notificationBadgeColor": "#E5C872",
     "colors": {
-      "Amber": "#FFB000",
-      "Ember": "#C98A2E",
-      "Green": "#4A9E5C",
-      "Red": "#C94F42",
-      "Teal": "#4F8F8F",
-      "Bone": "#B8B8B8",
-      "Ash": "#6F6F6F",
-      "Iron": "#4A4A4A"
+      "Red": "#B45648",
+      "Yellow": "#C4AC62",
+      "Green": "#6CAA71",
+      "Cyan": "#7CCBCD",
+      "Blue": "#6D96B4",
+      "Magenta": "#BD7BCD",
+      "Bone": "#DEE5EB",
+      "Slate": "#465C6D"
     }
   },
   "notifications": {
-    "paneFlashColor": "#FFB000"
+    "paneFlashColor": "#E5C872"
   },
   "shortcuts": {
     "bindings": {

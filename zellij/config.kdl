@@ -21,23 +21,24 @@ default_layout "compact"
 // No release-notes pane on version bumps.
 show_release_notes false
 
-theme "crt-mono"
+theme "apple-terminal"
 
 themes {
-    // crt-mono, shared with ghostty/config. Grayscale chrome so the UI sits on
-    // the terminal's true black; amber is the active/selected accent; red and
-    // green stay legible because zellij uses them for real state.
-    crt-mono {
-        fg 228 228 228
+    // apple-terminal, shared with ghostty/config, which takes its values from
+    // Terminal.app's Clear Dark profile. Apple's blue-gray neutrals carry the
+    // chrome so the UI sits quietly on true black; red, green and yellow stay
+    // legible because zellij uses them for real state.
+    apple-terminal {
+        fg 224 224 224
         bg 0 0 0
-        black 0 0 0
-        white 255 255 255
-        red 201 79 66
-        green 74 158 92
-        yellow 255 176 0
-        blue 111 111 111
-        magenta 154 154 154
-        orange 201 138 46
-        cyan 79 143 143
+        black 53 66 76
+        white 229 239 245
+        red 180 86 72
+        green 108 170 113
+        yellow 196 172 98
+        blue 109 150 180
+        magenta 189 123 205
+        orange 229 200 114
+        cyan 124 203 205
     }
 }

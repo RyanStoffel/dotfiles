@@ -1,6 +1,6 @@
 theme: 
-  dark: crt-mono
-  light: crt-mono
+  dark: apple-terminal
+  light: apple-terminal
 skills: 
   customDirectories: 
     - ~/.dotfiles/omp/skills
@@ -68,7 +68,7 @@ providers:
     - public
 setupVersion: 1
 modelRoles: 
-  default: anthropic/claude-opus-5
+  default: anthropic/claude-sonnet-5
 enabledModels: 
   - anthropic/claude-sonnet-5
   - anthropic/claude-opus-4-8
@@ -123,3 +123,5 @@ github:
   enabled: true
 task: 
   eager: default
+codexResets: 
+  autoRedeem: "yes"

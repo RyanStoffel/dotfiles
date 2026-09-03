@@ -8,10 +8,10 @@
       highlight = "fg=8";
     };
 
-    # crt-mono highlighting, keyed to ANSI slots rather than hex so it tracks
-    # whatever ghostty/config sets. Green means the word resolves to something
-    # runnable, bright red means it does not, amber marks literals and history
-    # expansions, gray is structure.
+    # apple-terminal highlighting, keyed to ANSI slots rather than hex so it
+    # tracks whatever ghostty/config sets. Green means the word resolves to
+    # something runnable, bright red means it does not, yellow marks literals
+    # and history expansions, gray is structure.
     syntaxHighlighting = {
       enable = true;
       styles = {
@@ -101,31 +101,33 @@
     enable = true;
     enableZshIntegration = true;
     defaultCommand = "fd --type f";
-    # Amber marks the cursor line and the matched substring; everything else is
-    # gray. "-1" keeps the terminal background instead of painting one.
+    # Yellow marks the matched substring and the pointer, bright white the
+    # cursor line; everything else is gray. "-1" keeps the terminal background
+    # instead of painting one.
     colors = {
-      "fg" = "#b8b8b8";
-      "fg+" = "#ffffff";
+      "fg" = "#dee5eb";
+      "fg+" = "#e5eff5";
       "bg" = "-1";
-      "bg+" = "#1c1c1c";
-      "hl" = "#ffb000";
-      "hl+" = "#ffb000";
-      "info" = "#6f6f6f";
-      "border" = "#303030";
-      "prompt" = "#ffb000";
-      "pointer" = "#ffb000";
-      "marker" = "#4a9e5c";
-      "spinner" = "#6f6f6f";
-      "header" = "#6f6f6f";
+      "bg+" = "#273d4c";
+      "hl" = "#e5c872";
+      "hl+" = "#e5c872";
+      "info" = "#7b8c99";
+      "border" = "#35424c";
+      "prompt" = "#7ccbcd";
+      "pointer" = "#e5c872";
+      "marker" = "#6caa71";
+      "spinner" = "#7b8c99";
+      "header" = "#7b8c99";
       "gutter" = "-1";
     };
   };
 
   home.sessionVariables = {
     # eza ships a rainbow by default. "reset" drops all of it, then only the
-    # columns that carry meaning get color: amber for executables and modified
-    # git state, green for added, red for deleted or broken, teal for links.
-    # Icons are pinned to gray so `ls` is not a color wheel.
+    # columns that carry meaning get color, keyed to ANSI slots so they track
+    # ghostty/config: yellow for executables and modified git state, green for
+    # added, red for deleted or broken, cyan for links. Icons are pinned to
+    # gray so `ls` is not a color wheel.
     EZA_COLORS = builtins.concatStringsSep ":" [
       "reset"
       "di=1;97"

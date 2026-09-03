@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!--
-  crt-mono syntax theme for bat, and through bat's theme cache, for delta.
-  Same palette as ghostty/config. Structure is white, literals are amber, types
-  and functions are teal, comments and punctuation are gray. Green is absent on
+  apple-terminal syntax theme for bat, and through bat's theme cache, for delta.
+  Same palette as ghostty/config, which takes its values from Terminal.app's
+  Clear Dark profile. Structure is bright white, literals are yellow, types
+  and functions are cyan, comments and punctuation are gray. Green is absent on
   purpose: it only ever means "ok" or "added", which here is the diff scopes.
 -->
 <plist version="1.0">
 <dict>
   <key>name</key>
-  <string>crt-mono</string>
+  <string>apple-terminal</string>
   <key>uuid</key>
-  <string>7d9f0c8e-2b3a-4c5d-9e1f-0a1b2c3d4e5f</string>
+  <string>3c1b7f42-9a6d-4e58-b0c7-2d5f8a1e6b94</string>
   <key>colorSpaceName</key>
   <string>sRGB</string>
   <key>semanticClass</key>
-  <string>theme.dark.crt_mono</string>
+  <string>theme.dark.apple_terminal</string>
   <key>settings</key>
   <array>
     <dict>
@@ -24,19 +25,19 @@
         <key>background</key>
         <string>#000000</string>
         <key>foreground</key>
-        <string>#E4E4E4</string>
+        <string>#E0E0E0</string>
         <key>caret</key>
-        <string>#FFB000</string>
+        <string>#E5C872</string>
         <key>lineHighlight</key>
-        <string>#101010</string>
+        <string>#191D27</string>
         <key>selection</key>
-        <string>#303030</string>
+        <string>#273D4C</string>
         <key>gutter</key>
         <string>#000000</string>
         <key>gutterForeground</key>
-        <string>#4A4A4A</string>
+        <string>#465C6D</string>
         <key>invisibles</key>
-        <string>#303030</string>
+        <string>#273D4C</string>
       </dict>
     </dict>
     <dict>
@@ -47,7 +48,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#4A4A4A</string>
+        <string>#465C6D</string>
       </dict>
     </dict>
     <dict>
@@ -58,7 +59,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#FFFFFF</string>
+        <string>#E5EFF5</string>
         <key>fontStyle</key>
         <string>bold</string>
       </dict>
@@ -71,7 +72,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#9A9A9A</string>
+        <string>#A9B5BF</string>
       </dict>
     </dict>
     <dict>
@@ -82,7 +83,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#C98A2E</string>
+        <string>#C4AC62</string>
       </dict>
     </dict>
     <dict>
@@ -93,7 +94,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#FFB000</string>
+        <string>#E5C872</string>
       </dict>
     </dict>
     <dict>
@@ -104,7 +105,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#79C4C4</string>
+        <string>#84DDE0</string>
       </dict>
     </dict>
     <dict>
@@ -115,7 +116,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#4F8F8F</string>
+        <string>#7CCBCD</string>
       </dict>
     </dict>
     <dict>
@@ -126,7 +127,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#E4E4E4</string>
+        <string>#E0E0E0</string>
       </dict>
     </dict>
     <dict>
@@ -137,7 +138,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#FFFFFF</string>
+        <string>#E5EFF5</string>
       </dict>
     </dict>
     <dict>
@@ -148,7 +149,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#4F8F8F</string>
+        <string>#7CCBCD</string>
       </dict>
     </dict>
     <dict>
@@ -159,7 +160,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#C94F42</string>
+        <string>#B45648</string>
       </dict>
     </dict>
     <dict>
@@ -170,7 +171,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#FFFFFF</string>
+        <string>#E5EFF5</string>
         <key>fontStyle</key>
         <string>bold</string>
       </dict>
@@ -183,7 +184,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#79C4C4</string>
+        <string>#84DDE0</string>
       </dict>
     </dict>
     <dict>
@@ -194,7 +195,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#4A9E5C</string>
+        <string>#6CAA71</string>
       </dict>
     </dict>
     <dict>
@@ -205,7 +206,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#C94F42</string>
+        <string>#B45648</string>
       </dict>
     </dict>
     <dict>
@@ -216,7 +217,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#FFB000</string>
+        <string>#E5C872</string>
       </dict>
     </dict>
     <dict>
@@ -227,7 +228,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#9A9A9A</string>
+        <string>#A9B5BF</string>
       </dict>
     </dict>
   </array>

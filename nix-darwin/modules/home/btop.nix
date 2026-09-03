@@ -1,67 +1,67 @@
 { ... }:
 {
   # btop ships saturated multi-hue gradients. This replaces them with the
-  # crt-mono palette from ghostty/config: gray graphs that ramp to amber under
-  # load, red only at the top of the temperature and CPU scales.
+  # apple-terminal palette from ghostty/config: gray graphs that ramp to yellow
+  # under load, red only at the top of the temperature and memory scales.
   programs.btop = {
     enable = true;
 
     settings = {
-      color_theme = "crt-mono";
+      color_theme = "apple-terminal";
       # Draw on the terminal's true black instead of btop's own background.
       theme_background = false;
       truecolor = true;
       vim_keys = true;
       rounded_corners = false;
-      # Braille glyphs read as a finer CRT trace than the default blocks.
+      # Braille glyphs read as a finer trace than the default blocks.
       graph_symbol = "braille";
       show_battery = true;
       update_ms = 1000;
     };
 
-    themes.crt-mono = ''
+    themes.apple-terminal = ''
       theme[main_bg]="#000000"
-      theme[main_fg]="#e4e4e4"
-      theme[title]="#ffffff"
-      theme[hi_fg]="#ffb000"
-      theme[selected_bg]="#1c1c1c"
-      theme[selected_fg]="#ffffff"
-      theme[inactive_fg]="#4a4a4a"
-      theme[graph_text]="#9a9a9a"
-      theme[meter_bg]="#1c1c1c"
-      theme[proc_misc]="#6f6f6f"
-      theme[cpu_box]="#303030"
-      theme[mem_box]="#303030"
-      theme[net_box]="#303030"
-      theme[proc_box]="#303030"
-      theme[div_line]="#303030"
-      theme[temp_start]="#6f6f6f"
-      theme[temp_mid]="#ffb000"
-      theme[temp_end]="#c94f42"
-      theme[cpu_start]="#6f6f6f"
-      theme[cpu_mid]="#b8b8b8"
-      theme[cpu_end]="#ffb000"
-      theme[free_start]="#303030"
-      theme[free_mid]="#4a4a4a"
-      theme[free_end]="#6f6f6f"
-      theme[cached_start]="#4a4a4a"
-      theme[cached_mid]="#6f6f6f"
-      theme[cached_end]="#9a9a9a"
-      theme[available_start]="#6f6f6f"
-      theme[available_mid]="#9a9a9a"
-      theme[available_end]="#b8b8b8"
-      theme[used_start]="#9a9a9a"
-      theme[used_mid]="#ffb000"
-      theme[used_end]="#c94f42"
-      theme[download_start]="#4a4a4a"
-      theme[download_mid]="#9a9a9a"
-      theme[download_end]="#e4e4e4"
-      theme[upload_start]="#4a4a4a"
-      theme[upload_mid]="#c98a2e"
-      theme[upload_end]="#ffb000"
-      theme[process_start]="#6f6f6f"
-      theme[process_mid]="#b8b8b8"
-      theme[process_end]="#ffb000"
+      theme[main_fg]="#e0e0e0"
+      theme[title]="#e5eff5"
+      theme[hi_fg]="#e5c872"
+      theme[selected_bg]="#273d4c"
+      theme[selected_fg]="#e5eff5"
+      theme[inactive_fg]="#465c6d"
+      theme[graph_text]="#a9b5bf"
+      theme[meter_bg]="#273d4c"
+      theme[proc_misc]="#7b8c99"
+      theme[cpu_box]="#35424c"
+      theme[mem_box]="#35424c"
+      theme[net_box]="#35424c"
+      theme[proc_box]="#35424c"
+      theme[div_line]="#35424c"
+      theme[temp_start]="#7b8c99"
+      theme[temp_mid]="#c4ac62"
+      theme[temp_end]="#b45648"
+      theme[cpu_start]="#7b8c99"
+      theme[cpu_mid]="#dee5eb"
+      theme[cpu_end]="#e5c872"
+      theme[free_start]="#35424c"
+      theme[free_mid]="#465c6d"
+      theme[free_end]="#7b8c99"
+      theme[cached_start]="#465c6d"
+      theme[cached_mid]="#7b8c99"
+      theme[cached_end]="#a9b5bf"
+      theme[available_start]="#7b8c99"
+      theme[available_mid]="#a9b5bf"
+      theme[available_end]="#dee5eb"
+      theme[used_start]="#a9b5bf"
+      theme[used_mid]="#c4ac62"
+      theme[used_end]="#b45648"
+      theme[download_start]="#465c6d"
+      theme[download_mid]="#a9b5bf"
+      theme[download_end]="#e0e0e0"
+      theme[upload_start]="#465c6d"
+      theme[upload_mid]="#c4ac62"
+      theme[upload_end]="#e5c872"
+      theme[process_start]="#7b8c99"
+      theme[process_mid]="#dee5eb"
+      theme[process_end]="#e5c872"
     '';
   };
 }
