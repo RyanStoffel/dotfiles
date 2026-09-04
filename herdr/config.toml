@@ -14,21 +14,18 @@ default_shell = "/bin/zsh"
 shell_mode = "login"
 
 [theme]
-# "terminal" inherits the host palette instead of shipping its own colors, so
-# herdr matches the apple-terminal palette in ghostty/config rather than
-# fighting it. Stock default is catppuccin.
+# "terminal" inherits the host palette from ghostty/config instead of shipping
+# its own colors. Stock default is catppuccin.
 name = "terminal"
 
 auto_switch = false
+
 [theme.custom]
 # "reset" leaves panel backgrounds transparent, so panels sit on the
 # terminal's true black instead of a lighter painted panel color.
 panel_bg = "reset"
 
 [ui]
-# Bright white highlights, borders, and navigation UI, matching the rest of the
-# chrome. Stock accent is cyan.
-accent = "#e5eff5"
 
 # Requested: mouse support. Click, drag to split, drag borders to resize.
 mouse_capture = true

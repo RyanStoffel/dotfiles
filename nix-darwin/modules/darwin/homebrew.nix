@@ -34,6 +34,7 @@
       "github"
       "codex"
       "antigravity-cli"
+      "hermes-desktop"
 
       # latex
       "mactex-no-gui"
@@ -70,6 +71,7 @@
       "omp"
       "tmux"
       "herdr"
+      "hermes-agent"
     ];
 
     masApps = {

@@ -3,56 +3,16 @@
 # Read by libghostty inside cmux, so this file is the single source of truth for
 # the terminal palette. Every terminal tool below inherits it through ANSI.
 #
-# apple-terminal palette: the stock colors from Terminal.app's "Clear Dark"
-# profile, which is the default profile on this machine
-# (Terminal.app/Contents/Resources/Initial Settings/Clear Dark.terminal, cross
-# checked against a live OSC 4 query of a Terminal window). Apple's own values
-# are already desaturated, so the result is near-monotone with color only where
-# it carries meaning.
-#
-# Verbatim from Apple:
-#   ANSI 0-15, ANSI white/bright white as the text grays, selection #273d4c,
-#   cursor #9d9d9d, text #e0e0e0.
-# Two deviations, both deliberate:
-#   background is #000000, not Apple's #191d27, because the standing rule here
-#   is a true black terminal; and Apple's blue-gray ANSI 0/8 double as the
-#   border and dim grays for tools that need chrome colors.
+# Colors are Ghostty's stock palette. The only deviation is the background,
+# which is true black instead of Ghostty's #282c34.
 #
 # No `theme =` line: any theme directive suppresses cmux's own managed palette,
-# so the explicit palette below wins in both apps.
+# so both apps stay on their defaults.
 
 background = #000000
-foreground = #e0e0e0
 
-# Apple's default cursor gray. Block shape is a local preference, not Apple's.
-cursor-color = #9d9d9d
-cursor-text = #000000
 cursor-style = block
 cursor-style-blink = false
-
-selection-background = #273d4c
-selection-foreground = #e5eff5
-
-palette = 0=#35424c
-palette = 1=#b45648
-palette = 2=#6caa71
-palette = 3=#c4ac62
-palette = 4=#6d96b4
-palette = 5=#bd7bcd
-palette = 6=#7ccbcd
-palette = 7=#dee5eb
-palette = 8=#465c6d
-palette = 9=#df6c5a
-palette = 10=#79be7e
-palette = 11=#e5c872
-palette = 12=#67b5ed
-palette = 13=#d389e5
-palette = 14=#84dde0
-palette = 15=#e5eff5
-
-# Fix: stock behavior promotes any bold text to the bright palette, which turns
-# bold gray into near-white and flattens the ramp.
-bold-is-bright = false
 
 font-family = JetBrainsMono Nerd Font
 font-size = 14

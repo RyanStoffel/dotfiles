@@ -10,6 +10,5 @@ in
   home.file.".omp/agent/config.yml".source = link "config.yml";
   home.file.".omp/agent/keybindings.json".source = link "keybindings.json";
   home.file.".omp/agent/AGENTS.md".source = link "AGENTS.md";
-  home.file.".omp/agent/themes".source = link "themes";
   home.file.".omp/agent/skills".source = link "skills";
 }
